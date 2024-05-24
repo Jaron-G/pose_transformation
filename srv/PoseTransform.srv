@@ -1,0 +1,4 @@
+float32[16] final_pose
+string matched_matched_model
+---
+float32[6] grasp_pose
