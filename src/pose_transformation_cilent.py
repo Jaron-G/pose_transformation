@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 from __future__ import print_function 
 import sys
 import rospy
@@ -22,7 +22,6 @@ if __name__ == "__main__":
     [0,  0,  0,  1]])
     final_pose = final_pose.reshape(-1).tolist()
     matched_model = 'pipe'
-    
 
     print("Requesting:",final_pose, matched_model)
     print("Pose_grasp:",pose_transformation_client(final_pose, matched_model))
