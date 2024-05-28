@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Load the model parameters onto the parameter server -->
+  <rosparam command="load" file="$(find pose_transformation_pkg)/config/model_list.yaml" />
+
+  <node name="pose_transformation_cilent" pkg="pose_transformation_pkg" type="pose_transformation_cilent.py" output="screen">    
+  </node>
+  
+  <node name="pose_transformation_server" pkg="pose_transformation_pkg" type="pose_transformation_server.py" output="screen">    
+  </node>
+
+</launch>

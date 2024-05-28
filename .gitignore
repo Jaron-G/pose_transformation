@@ -1,2 +1,3 @@
 # ignore vscode configuration files and folders
 .vscode/
+src/__pycache__/
