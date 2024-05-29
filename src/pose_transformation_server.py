@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import print_function
-from pose_transformation_pkg.srv import PoseTransform,PoseTransformResponse #注意是功能包名.srv
+from pose_transformation.srv import PoseTransform,PoseTransformResponse #注意是功能包名.srv
 import rospy
 from std_msgs.msg import Int32
 

@@ -2,7 +2,7 @@
 from __future__ import print_function 
 import sys
 import rospy
-from pose_transformation_pkg.srv import PoseTransform,PoseTransformResponse#注意是功能包名.srv
+from pose_transformation.srv import PoseTransform,PoseTransformResponse#注意是功能包名.srv
 import numpy as np
 
 def pose_transformation_client(x, y):

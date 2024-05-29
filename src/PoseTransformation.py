@@ -39,7 +39,7 @@ def generate_pose(homo_matrix):
 
 def PoseTrans(matched_item, final_pose):
         # Coordinate transformation: camera coordinate system transformation to robot coordinate system transformation
-        trans_matrix = np.loadtxt('/catkin_ws/src/pose_transformation_pkg/config/matrix.txt')
+        trans_matrix = np.loadtxt('/catkin_ws/src/pose_transformation/config/matrix.txt')
         final_trans_pose = np.matmul(trans_matrix, final_pose)
 
         # Get model configuration parameters from the parameter server

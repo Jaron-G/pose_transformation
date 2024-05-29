@@ -36,17 +36,17 @@ roscore
 另开两个终端启动服务端和客户端：
 
 ```
-rosrun pose_transformation_pkg pose_transformation_server.py
+rosrun pose_transformation pose_transformation_server.py
 ```
 
 ```
-rosrun pose_transformation_pkg pose_transformation_cilent.py
+rosrun pose_transformation pose_transformation_cilent.py
 ```
 
 直接运行姿态变换：
 
 ```
-cd catkin_ws/src/pose_transformation_pkg/src
+cd catkin_ws/src/pose_transformation/src
 python3 PoseTransformation.py
 ```
 
