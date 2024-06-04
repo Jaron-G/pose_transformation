@@ -15,9 +15,9 @@ def handle_pose_transform(req):
     print(req.final_pose, req.matched_matched_model)
     final_pose = np.array(req.final_pose).reshape(4,4)
     matched_model = req.matched_matched_model
-
     rotation_matrix, pose_g, pose_up = PoseTrans(matched_model, final_pose)
-    return PoseTransformResponse(pose_g.tolist())
+    rotation_matrix, grasp_pose, up_pose  = rotation_matrix.reshape(-1).tolist(),pose_g.tolist(),pose_up.tolist()
+    return PoseTransformResponse(rotation_matrix, grasp_pose, up_pose)
 
 if __name__ == "__main__":
     rospy.init_node('pose_transformation_server')
