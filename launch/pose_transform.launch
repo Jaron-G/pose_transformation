@@ -2,7 +2,7 @@
 <launch>
 
   <!-- Load the model parameters onto the parameter server -->
-  <rosparam command="load" file="$(find pose_transformation)/config/model_list.yaml" />
+  <rosparam command="load" file="$(find grasp_icp)/config/model_list.yaml" />
 
   <!-- node name="pose_transformation_cilent" pkg="pose_transformation" type="pose_transformation_cilent.py" output="screen">    
   </node -->
