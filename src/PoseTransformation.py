@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 import rospy
 import numpy as np
-from std_msgs.msg import Int32
 import math
-from scipy.spatial.transform import Rotation as R
 import transforms3d as tfs
+
+HAND_EYE_MATRIX_PATH = '/catkin_ws/src/grasp_icp/config/'
 
 def r_t_to_homogeneous_matrix(R, T):
     R1 = np.vstack([R, np.array([0, 0, 0])])
@@ -39,7 +39,7 @@ def generate_pose(homo_matrix):
 
 def PoseTrans(matched_item, final_pose):
         # Coordinate transformation: camera coordinate system transformation to robot coordinate system transformation
-        trans_matrix = np.loadtxt('/catkin_ws/src/pose_transformation/config/matrix.txt')
+        trans_matrix = np.loadtxt(HAND_EYE_MATRIX_PATH + 'matrix.txt')
         final_trans_pose = np.matmul(trans_matrix, final_pose)
 
         # Get model configuration parameters from the parameter server
