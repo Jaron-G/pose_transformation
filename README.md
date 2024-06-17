@@ -38,6 +38,7 @@
 
 
 #### 3.该包功能单独验证方法：
++ clone this repository to catkin_ws/src.
 + 启动测试环境
   ```bash
   cd pose_transformation/Docker
