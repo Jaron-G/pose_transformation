@@ -4,7 +4,6 @@ import numpy as np
 import math
 import transforms3d as tfs
 
-HAND_EYE_MATRIX_PATH = '/catkin_ws/src/grasp_icp/config/'
 
 def r_t_to_homogeneous_matrix(R, T):
     R1 = np.vstack([R, np.array([0, 0, 0])])
@@ -37,7 +36,7 @@ def generate_pose(homo_matrix):
         pose_euler = np.hstack([tempT.flatten(), euler_angles])
         return pose_euler, tempR
 
-def PoseTrans(matched_item, final_pose):
+def PoseTrans(matched_item, final_pose, HAND_EYE_MATRIX_PATH = None):
         # Coordinate transformation: camera coordinate system transformation to robot coordinate system transformation
         trans_matrix = np.loadtxt(HAND_EYE_MATRIX_PATH + 'matrix.txt')
         final_trans_pose = np.matmul(trans_matrix, final_pose)
